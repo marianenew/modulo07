@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import LogoutModal from "../forms/LogoutModal";
+import LogoutModal from "../Forms/LogoutModal.jsx";
 import { clearFormData } from "../../store/form/formSlice";
 
 const Navigator = () => {
