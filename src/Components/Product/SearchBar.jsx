@@ -1,29 +1,35 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilter, setInStock } from '../../store/features/product/productSlice.js';
-
-function SearchBar() {
-  const dispatch = useDispatch();
-  const { filterText, inStock } = useSelector((state) => state.product);
-
+/* eslint-disable react/prop-types */
+const SearchBar = ({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange }) => {
   return (
     <form>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={filterText}
-        onChange={(e) => dispatch(setFilter(e.target.value))}
-      />
-      <label>
-        <input
-          type="checkbox"
-          checked={inStock}
-          onChange={() => dispatch(setInStock())}
-        />
-        Only show products in stock
-      </label>
+      <table border="1" width="300">
+        <tbody>
+          <tr>
+            <td>
+              <input
+                type="text"
+                value={filterText}
+                placeholder="Search..."
+                onChange={(e) => onFilterTextChange(e.target.value)}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={inStockOnly}
+                  onChange={(e) => onInStockOnlyChange(e.target.checked)}
+                />
+                {' '}
+                Only show products in stock
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </form>
   );
-}
-
+};
 export default SearchBar;
-

@@ -12,7 +12,7 @@ const LandingPage = () => {
             <main className="landing-content">
                 <section className="landing-intro">
                     <h2>Bienvenido</h2>
-                    <hr class="separator" />
+                    <div className="line"></div>
                     <p>
                         Este módulo se centra en el uso de <strong>React</strong>, incluyendo la creación de
                         <strong> componentes</strong>, el manejo de <strong>hooks</strong>, y el uso de <strong>Redux</strong>.
@@ -20,7 +20,7 @@ const LandingPage = () => {
                 </section>
                 <section className="landing-topics">
                     <h2>Temas Cubiertos</h2>
-                    <hr class="separator" />
+                    <div className="line"></div>
                     <table>
                         <thead>
                             <tr>
@@ -40,7 +40,7 @@ const LandingPage = () => {
                 </section>
                 <section className="landing-resources">
                     <h2>Recursos Adicionales</h2>
-                    <hr class="separator" />
+                    <div className="line"></div>
                     <p>Para profundizar en los temas cubiertos, consulta los siguientes recursos:</p>
                 </section>
             </main>
